@@ -1370,6 +1370,37 @@
       object-fit: contain;
       transform: translateY(-8px);
     }
+
+    /* Give wrapped game cards room for their neon glow. */
+    #games .merch-grid {
+      column-gap: 1.5rem;
+      row-gap: 3rem;
+    }
+    #games .tmnt-showcase {
+      position: relative;
+      border-color: rgba(124, 255, 95, 0.65);
+      box-shadow:
+        0 0 28px rgba(124, 255, 95, 0.25),
+        0 0 60px rgba(0, 255, 136, 0.18),
+        0 18px 60px rgba(0, 0, 0, 0.65);
+    }
+    #games .tmnt-showcase::before {
+      content: "";
+      position: absolute;
+      inset: -18px;
+      border-radius: inherit;
+      background: radial-gradient(circle at 50% 40%,
+        rgba(124, 255, 95, 0.28) 0%,
+        rgba(0, 255, 136, 0.18) 35%,
+        transparent 70%);
+      filter: blur(10px);
+      pointer-events: none;
+      z-index: -1;
+    }
+    #games .tmnt-showcase img {
+      filter: drop-shadow(0 0 18px rgba(124, 255, 95, 0.35))
+              drop-shadow(0 0 34px rgba(0, 255, 136, 0.22));
+    }
   </style>
 
   
@@ -1560,7 +1591,7 @@
       <p>Game news and release updates.</p>
     </div>
 
-    <div class="merch-card">
+    <div class="merch-card tmnt-showcase">
       <img src="images/main/tmnt-card.png" alt="TMNT" />
       <a class="merch-button" href="/html/tmnt.html">Play the Game</a>
       <div class="merch-title">TMNT - BETA</div>
