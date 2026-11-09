@@ -1358,11 +1358,17 @@
       width: 100%;
     }
 
+    #games .verbia-screenshot {
+      height: 220px;
+      width: 100%;
+      overflow: hidden;
+    }
     #games .game-showcase img.verbia-gameplay {
       width: 100%;
       max-width: none;
-      object-fit: cover;
-      object-position: center;
+      height: 244px;
+      object-fit: contain;
+      transform: translateY(-8px);
     }
   </style>
 
@@ -1541,7 +1547,7 @@
   <div class="merch-grid">
 
     <div class="merch-card game-showcase">
-      <img src="https://verbia.summonmars.com/images/verbia/marketing/gameplay.png" class="verbia-gameplay" alt="Actual Verbia gameplay showing word constellation puzzles" />
+      <div class="verbia-screenshot"><img src="https://verbia.summonmars.com/images/verbia/marketing/gameplay.png" class="verbia-gameplay" alt="Actual Verbia gameplay showing word constellation puzzles" /></div>
       <a class="merch-button" href="https://verbia.summonmars.com">Explore Verbia</a>
       <div class="merch-title">Verbia</div>
       <p>A cosmic word adventure.</p>
