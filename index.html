@@ -1307,6 +1307,34 @@
   gap: 2px; /* or bump slightly from your current gap */
 }
     
+
+    /* Official YouTube Music releases */
+    .music-video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .music-video-card {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      background: #000;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    }
+    .music-video-card iframe {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      border: 0;
+    }
+    .music-video-card .track-links { flex-wrap: wrap; }
+    .music-video-card .track-links a { padding: 0.5rem 0; }
+    @media (max-width: 768px) {
+      .music-video-grid { grid-template-columns: minmax(0, 1fr); }
+    }
   </style>
 
   
@@ -1353,92 +1381,54 @@
     <section id="music">
       <h2>Music</h2>
       <p>
-        Listen to the latest  transmissions: glitchy hip-hop pulses,
+        Listen to the latest transmissions: glitchy hip-hop pulses,
         cinematic synth storms, and everything humming between.
       </p>
-
-      <div class="embed-grid">
-
-        <div class="embed-wrapper" data-audio-id="track-life">
-          <div class="embed-inner">
-            <div class="track-cover">
-              <img src="images/main/cover-life-that-moves.png" alt="Life That Moves cover art">
-            </div>
-            <div class="track-meta">
-              <div class="track-title">Life That Moves</div>
-              <div class="track-row">
-                <button class="track-play" type="button" aria-label="Play Life That Moves">▶</button>
-                <div class="track-links">
-                  <a href="https://open.spotify.com/artist/5GohNtXpBBkQyOfYpweSnO" target="_blank" rel="noopener">SPOTIFY</a>
-                  <a href="https://music.apple.com/us/artist/summon-mars/1770939240" target="_blank" rel="noopener">APPLE</a>
-                  <a href="https://www.youtube.com/@SummonMarsOfficial" target="_blank" rel="noopener">YT</a>
-                </div>
-              </div>
-             <audio id="track-life" src="./mp3/life-that-moves-song.mp3" preload="none"></audio>
+      <div class="music-video-grid">
+        <article class="music-video-card">
+          <iframe src="https://www.youtube.com/embed/UKgmv5zu5h8" title="Life That Moves — Summon Mars" width="560" height="315" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="track-meta">
+            <h3 class="track-title">Life That Moves</h3>
+            <div class="track-links">
+              <a href="https://open.spotify.com/artist/5GohNtXpBBkQyOfYpweSnO" target="_blank" rel="noopener noreferrer" aria-label="Summon Mars on Spotify">SPOTIFY</a>
+              <a href="https://music.apple.com/us/album/life-that-moves/1872166219?i=1872166220" target="_blank" rel="noopener noreferrer" aria-label="Life That Moves on Apple Music">APPLE</a>
+              <a href="https://www.youtube.com/watch?v=UKgmv5zu5h8" target="_blank" rel="noopener noreferrer" aria-label="Life That Moves on YouTube">YT</a>
             </div>
           </div>
-        </div>
-
-        <div class="embed-wrapper" data-audio-id="track-love">
-          <div class="embed-inner">
-            <div class="track-cover">
-              <img src="images/main/cover-what-is-love.png" alt="What Is Love cover art">
-            </div>
-            <div class="track-meta">
-              <div class="track-title">What Is Love</div>
-              <div class="track-row">
-                <button class="track-play" type="button" aria-label="Play What Is Love">▶</button>
-                <div class="track-links">
-                  <a href="https://open.spotify.com/artist/5GohNtXpBBkQyOfYpweSnO" target="_blank" rel="noopener">SPOTIFY</a>
-                  <a href="https://music.apple.com/us/artist/summon-mars/1770939240" target="_blank" rel="noopener">APPLE</a>
-                  <a href="https://www.youtube.com/@SummonMarsOfficial" target="_blank" rel="noopener">YT</a>
-                </div>
-              </div>
-             <audio id="track-love" src="./mp3/what-is-love-song.mp3" preload="none"></audio>
+        </article>
+        <article class="music-video-card">
+          <iframe src="https://www.youtube.com/embed/4cdHUdcL-hs" title="What Is Love — Summon Mars" width="560" height="315" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="track-meta">
+            <h3 class="track-title">What Is Love</h3>
+            <div class="track-links">
+              <a href="https://open.spotify.com/artist/5GohNtXpBBkQyOfYpweSnO" target="_blank" rel="noopener noreferrer" aria-label="Summon Mars on Spotify">SPOTIFY</a>
+              <a href="https://music.apple.com/us/album/what-is-love/1873998470?i=1873998471" target="_blank" rel="noopener noreferrer" aria-label="What Is Love on Apple Music">APPLE</a>
+              <a href="https://www.youtube.com/watch?v=4cdHUdcL-hs" target="_blank" rel="noopener noreferrer" aria-label="What Is Love on YouTube">YT</a>
             </div>
           </div>
-        </div>
-
-        <div class="embed-wrapper" data-audio-id="track-wake">
-          <div class="embed-inner">
-            <div class="track-cover">
-              <img src="images/main/cover-wake-up-my-mind.png" alt="Wake Up My Mind cover art">
-            </div>
-            <div class="track-meta">
-              <div class="track-title">Wake Up My Mind</div>
-              <div class="track-row">
-                <button class="track-play" type="button" aria-label="Play Wake Up My Mind">▶</button>
-                <div class="track-links">
-                  <a href="https://open.spotify.com/artist/5GohNtXpBBkQyOfYpweSnO" target="_blank" rel="noopener">SPOTIFY</a>
-                  <a href="https://music.apple.com/us/artist/summon-mars/1770939240" target="_blank" rel="noopener">APPLE</a>
-                  <a href="https://www.youtube.com/@SummonMarsOfficial" target="_blank" rel="noopener">YT</a>
-                </div>
-              </div>
-             <audio id="track-wake" src="./mp3/wake-up-my-mind-song.mp3" preload="none"></audio>
+        </article>
+        <article class="music-video-card">
+          <iframe src="https://www.youtube.com/embed/oYN9EiH2rG0" title="Wake Up My Mind — Summon Mars" width="560" height="315" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="track-meta">
+            <h3 class="track-title">Wake Up My Mind</h3>
+            <div class="track-links">
+              <a href="https://open.spotify.com/artist/5GohNtXpBBkQyOfYpweSnO" target="_blank" rel="noopener noreferrer" aria-label="Summon Mars on Spotify">SPOTIFY</a>
+              <a href="https://music.apple.com/us/album/wake-up-my-mind/1870870350?i=1870870352" target="_blank" rel="noopener noreferrer" aria-label="Wake Up My Mind on Apple Music">APPLE</a>
+              <a href="https://www.youtube.com/watch?v=oYN9EiH2rG0" target="_blank" rel="noopener noreferrer" aria-label="Wake Up My Mind on YouTube">YT</a>
             </div>
           </div>
-        </div>
-
-        <div class="embed-wrapper" data-audio-id="track-race">
-          <div class="embed-inner">
-            <div class="track-cover">
-              <img src="images/main/cover-race-to-mars.jpg" alt="Race To Mars cover art">
-            </div>
-            <div class="track-meta">
-              <div class="track-title">Race To Mars</div>
-              <div class="track-row">
-                <button class="track-play" type="button" aria-label="Play Race To Mars">▶</button>
-                <div class="track-links">
-                  <a href="https://open.spotify.com/artist/5GohNtXpBBkQyOfYpweSnO" target="_blank" rel="noopener">SPOTIFY</a>
-                  <a href="https://music.apple.com/us/artist/summon-mars/1770939240" target="_blank" rel="noopener">APPLE</a>
-                  <a href="https://www.youtube.com/@SummonMarsOfficial" target="_blank" rel="noopener">YT</a>
-                </div>
-              </div>
-             <audio id="track-race" src="./mp3/race-to-mars-song.mp3" preload="none"></audio>
+        </article>
+        <article class="music-video-card">
+          <iframe src="https://www.youtube.com/embed/PUJtXBYHG7s" title="Deserted Mirage — Summon Mars" width="560" height="315" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="track-meta">
+            <h3 class="track-title">Deserted Mirage</h3>
+            <div class="track-links">
+              <a href="https://open.spotify.com/artist/5GohNtXpBBkQyOfYpweSnO" target="_blank" rel="noopener noreferrer" aria-label="Summon Mars on Spotify">SPOTIFY</a>
+              <a href="https://music.apple.com/us/album/deserted-mirage/6771433700?i=6771433701" target="_blank" rel="noopener noreferrer" aria-label="Deserted Mirage on Apple Music">APPLE</a>
+              <a href="https://www.youtube.com/watch?v=PUJtXBYHG7s" target="_blank" rel="noopener noreferrer" aria-label="Deserted Mirage on YouTube">YT</a>
             </div>
           </div>
-        </div>
-
+        </article>
       </div>
     </section>
 
@@ -1763,68 +1753,7 @@
     init();
   })();
 
-      /* --- AUDIO PLAYER LOGIC (same as before) --- */
-      const cards   = document.querySelectorAll('.embed-wrapper');
-      const buttons = document.querySelectorAll('.track-play');
-      const audios  = document.querySelectorAll('audio[id^="track-"]');
 
-      const AUDIO_PREVIEW_SECONDS = 23;
-
-      const pauseAll = () => {
-        audios.forEach(a => a.pause());
-        cards.forEach(c => c.classList.remove('playing'));
-        buttons.forEach(b => b.textContent = '▶');
-      };
-
-      const stopPreview = (audio) => {
-        const card = document.querySelector(`[data-audio-id="${audio.id}"]`);
-        const btn = card ? card.querySelector('.track-play') : null;
-        audio.pause();
-        audio.currentTime = 0;
-        if (card) card.classList.remove('playing');
-        if (btn) btn.textContent = '▶';
-      };
-
-      audios.forEach(audio => {
-        audio.addEventListener('timeupdate', () => {
-          if (audio.currentTime >= AUDIO_PREVIEW_SECONDS) {
-            stopPreview(audio);
-          }
-        });
-
-        audio.addEventListener('ended', () => {
-          stopPreview(audio);
-        });
-      });
-
-      buttons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          const card    = btn.closest('.embed-wrapper');
-          const audioId = card.getAttribute('data-audio-id');
-          const audio   = document.getElementById(audioId);
-          if (!audio) return;
-
-          if (!audio.paused) {
-            audio.pause();
-            card.classList.remove('playing');
-            btn.textContent = '▶';
-          } else {
-            pauseAll();
-            audio.currentTime = 0;
-            audio.play();
-            card.classList.add('playing');
-            btn.textContent = '⏸';
-          }
-        });
-      });
-
-      cards.forEach(card => {
-        card.addEventListener('click', () => {
-          const btn = card.querySelector('.track-play');
-          if (btn) btn.click();
-        });
-      });
     });
   </script>
 
