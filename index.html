@@ -1241,7 +1241,7 @@
 
   /* --- OCEAN OF ALIENS SUBTLE SHOWCASE --- */
 /* --- OCEAN OF ALIENS: FEATURED SHOWCASE CARD --- */
-.merch-card.ocean-of-aliens-showcase{
+.merch-card.game-showcase{
   transform: scale(1.08); /* smaller default */
   z-index: 5;
   box-shadow:
@@ -1253,13 +1253,13 @@
   transition: transform 0.25s ease;
 }
 
-.ocean-of-aliens-showcase:hover {
+.game-showcase:hover {
   transform: scale(1.33); /* bigger on hover */
 }
 
 
 /* Glow aura behind the featured card */
-.merch-card.ocean-of-aliens-showcase::before{
+.merch-card.game-showcase::before{
   content:"";
   position:absolute;
   inset:-18px;
@@ -1274,14 +1274,14 @@
 }
 
 /* Make the image pop (without changing layout) */
-.merch-card.ocean-of-aliens-showcase img{
+.merch-card.game-showcase img{
   filter:
     drop-shadow(0 0 18px rgba(255,59,130,.35))
     drop-shadow(0 0 34px rgba(138,43,226,.22));
 }
 
 /* Soft ambient glow behind */
-.ocean-of-aliens-showcase::before {
+.game-showcase::before {
   content: "";
   position: absolute;
   inset: -14px;
@@ -1299,7 +1299,7 @@
 }
 
 /* Slight hover lift */
-.ocean-of-aliens-showcase:hover {
+.game-showcase:hover {
   transform: scale(1.08);
 }
 
@@ -1511,14 +1511,14 @@
 
   <div class="merch-grid">
 
-    <div class="merch-card">
-      <img src="images/main/random-gametag.png" alt="Verbia" />
+    <div class="merch-card game-showcase">
+      <img src="https://verbia.summonmars.com/images/verbia/marketing/gameplay.png" alt="Actual Verbia gameplay showing word constellation puzzles" />
       <a class="merch-button" href="https://verbia.summonmars.com">Explore Verbia</a>
       <div class="merch-title">Verbia</div>
       <p>A cosmic word adventure.</p>
     </div>
 
-    <div class="merch-card ocean-of-aliens-showcase">
+    <div class="merch-card game-showcase">
       <img src="images/main/ocean-of-aliens-promo.png" alt="Ocean of Aliens" />
       <a class="merch-button" href="https://oceanofaliens.summonmars.com">EXPLORE OCEAN OF ALIENS</a>
       <div class="merch-title">Ocean of Aliens - Beta</div>
